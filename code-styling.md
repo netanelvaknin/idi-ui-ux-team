@@ -16,8 +16,8 @@ Ordering css properties by group types
 
 #### Good:
 ```
-In this exmaple we can clearly see how we can sort properties by groups,
-For example margin + padding, width + height
+/* In this exmaple we can clearly see how we can sort properties by groups,
+For example margin + padding, width + height */
 
 .css-block {
     margin: 0 auto;
@@ -26,5 +26,19 @@ For example margin + padding, width + height
     height: 50px;
     border-bottom: 1px;
 }
+```
+
+### 2. One line CSS property
+#### Bad:
+```
+    .css-block {
+        width: 100px;
+    }
+```
+
+### Good:
+```
+    /* Instead - one line. This simple action will significantly decrease the amount of lines in our code and will be more readable*/
+    .css-block { width: 100px; }
 ```
 
