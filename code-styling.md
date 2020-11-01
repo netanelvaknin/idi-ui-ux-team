@@ -17,6 +17,7 @@ Ordering css properties by group types
 ```
 In this exmaple we can clearly see how we can sort properties by groups,
 For example margin + padding, width + height
+
 .css-block {
     margin: 0 auto;
     padding: 5px;
