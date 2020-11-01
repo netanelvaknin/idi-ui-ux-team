@@ -1,0 +1,1 @@
+## Code styling document for IDI UI UX team
