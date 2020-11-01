@@ -31,47 +31,47 @@ For example margin + padding, width + height */
 ### 2. One line CSS property
 #### Bad:
 ```
-    .css-block {
-        width: 100px;
-    }
+.css-block {
+    width: 100px;
+}
 ```
 
 ### Good:
 ```
-    /* Instead - one line. This simple action will significantly decrease the amount of lines in our code and will be more readable*/
-    .css-block { width: 100px; }
+/* Instead - one line. This simple action will significantly decrease the amount of lines in our code and will be more readable*/
+.css-block { width: 100px; }
 ```
 
 ### 3. Selector ordering
 Selectors need to ordered by their specificity and grouped by similarity. This ensures code is easy to find and change later in the process. 
 #### Bad:
 ```
-    form {
-        ...
-    }
+form {
+    ...
+}
 
-    form label span {
-        ...
-    }
+form label span {
+    ...
+}
 
-    form label {
-        ...
-    }
+form label {
+    ...
+}
 ```
 
 #### Good: 
 ```
-    form {
-        ...
-    }
+form {
+    ...
+}
 
-    form label {
-        ...
-    }
+form label {
+    ...
+}
 
-    form label span {
-        ...
-    }
+form label span {
+    ...
+}
 ```
 
 ## Styled Components
@@ -79,17 +79,17 @@ Selectors need to ordered by their specificity and grouped by similarity. This e
 In styled components we should be avoid as much as possible from select nested elements with their tag name. This can cause future bugs when other developers will change the components markups.
 #### Bad:
 ```
-    const ExampleComponent = styled.div`
-        div:nth-child(2) {} // Should be avoided
-    `;
+const ExampleComponent = styled.div`
+    div:nth-child(2) {} // Should be avoided
+`;
 ```
 
 #### Good:
 ```
-    // Better option (If possible)
-    const ExampleComponent = styled.div`
-        .top-bar {}
-    `;
+// Better option (If possible)
+const ExampleComponent = styled.div`
+    .top-bar {}
+`;
 ```
 
 ## React
@@ -98,12 +98,12 @@ Props that start with the word "on" will allways be in the *END* of the interfac
 This will make more sence because we are dividing them to two parts: inputs / outputs (handlers).
 #### Bad:
 ```
-    interface ComponentProps {
-        onChange: (e) => void;
-        value: string;
-        label: string;
-        error: boolean;
-    }
+interface ComponentProps {
+    onChange: (e) => void;
+    value: string;
+    label: string;
+    error: boolean;
+}
 ```
 
 #### Good:
