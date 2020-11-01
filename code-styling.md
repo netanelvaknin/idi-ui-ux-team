@@ -108,10 +108,10 @@ interface ComponentProps {
 
 #### Good:
 ```
-    interface ComponentProps {
-        value: string;
-        label: string;
-        error: boolean;
-        onChange: (e) => void;
-    }
+interface ComponentProps {
+    value: string;
+    label: string;
+    error: boolean;
+    onChange: (e) => void;
+}
 ```
