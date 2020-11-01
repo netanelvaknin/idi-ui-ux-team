@@ -42,3 +42,34 @@ For example margin + padding, width + height */
     .css-block { width: 100px; }
 ```
 
+### 3. Selector ordering
+Selectors need to ordered by their specificity and grouped by similarity. This ensures code is easy to find and change later in the process. 
+#### Bad:
+```
+    form {
+        ...
+    }
+
+    form label span {
+        ...
+    }
+
+    form label {
+        ...
+    }
+```
+
+#### Good: 
+```
+    form {
+        ...
+    }
+
+    form label {
+        ...
+    }
+
+    form label span {
+        ...
+    }
+```
