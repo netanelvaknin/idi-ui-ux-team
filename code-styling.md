@@ -91,3 +91,27 @@ In styled components we should be avoid as much as possible from select nested e
         .top-bar {}
     `;
 ```
+
+## React
+### 1. Ordering props
+Props that start with the word "on" will allways be in the *END* of the interface / props destructuring order.
+This will make more sence because we are dividing them to two parts: inputs / outputs (handlers).
+#### Bad:
+```
+    interface ComponentProps {
+        onChange: (e) => void;
+        value: string;
+        label: string;
+        error: boolean;
+    }
+```
+
+#### Good:
+```
+    interface ComponentProps {
+        value: string;
+        label: string;
+        error: boolean;
+        onChange: (e) => void;
+    }
+```
