@@ -1,7 +1,8 @@
 # Code styling document for IDI UI UX team
 
-## CSS Examples
-### Bad:
+## CSS
+### 1. Ordering by groups
+#### Bad:
 Ordering css properties by group types
 ```
 .css-block {
@@ -13,7 +14,7 @@ Ordering css properties by group types
 }
 ```
 
-### Good:
+#### Good:
 ```
 In this exmaple we can clearly see how we can sort properties by groups,
 For example margin + padding, width + height
@@ -26,3 +27,4 @@ For example margin + padding, width + height
     border-bottom: 1px;
 }
 ```
+
