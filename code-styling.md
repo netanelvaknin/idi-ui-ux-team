@@ -1,7 +1,9 @@
 # Code styling document for IDI UI UX team
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 ## CSS
 ### 1. Ordering by groups
 #### Bad:
@@ -75,11 +77,11 @@ form label span {
     ...
 }
 ```
-
-
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 ## Styled Components
 ### 1. Avoiding from tag selectors
 In styled components we should be avoid as much as possible from select nested elements with their tag name. This can cause future bugs when other developers will change the components markups.
@@ -97,11 +99,11 @@ const ExampleComponent = styled.div`
     .top-bar {}
 `;
 ```
-
-
-
-
-
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 ## React
 ### 1. Ordering props
 Props that start with the word "on" will allways be in the *END* of the interface / props destructuring order.
