@@ -77,6 +77,29 @@ form label span {
     ...
 }
 ```
+
+
+### 3. Selector nesting
+Selectors nesting will be not over 3 levels of deep
+#### Bad:
+```
+.wrapper { // 1
+    div { // 2
+        span { // 3
+            a { color: red; } //4 
+        }
+    }
+}
+```
+#### Good:
+```
+.wrapper { // 1
+    span  { // 2
+        a {color: red;} // 3
+    }
+}
+```
+
 &nbsp;
 &nbsp;
 &nbsp;
