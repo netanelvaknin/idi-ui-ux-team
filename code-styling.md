@@ -83,19 +83,19 @@ form label span {
 Selectors nesting will be not over 3 levels of deep
 #### Bad:
 ```
-.wrapper { // 1
-    div { // 2
-        span { // 3
-            a { color: red; } //4 
+.wrapper { /* 1 */
+    div { /* 2 */
+        span { /* 3 */
+            a { color: red; } /* 4 */ 
         }
     }
 }
 ```
 #### Good:
 ```
-.wrapper { // 1
-    span  { // 2
-        a {color: red;} // 3
+.wrapper { /* 1 */
+    span  { /* 2 */
+        a {color: red;} /* 3 MAXIMUM! */
     }
 }
 ```
