@@ -122,6 +122,35 @@ const ExampleComponent = styled.div`
     .top-bar {}
 `;
 ```
+
+
+### 2. Single condition instead of repeating conditions
+In our styled components we have direct access to theme.brand. There is no need to repeat our conditions in every property.
+Instead we can just declare one Ternary condition inside the component.
+#### Bad:
+```
+const ExampleComponent = styled.div`
+    font-family: ${props => props.theme.fontBold};
+    font-size: ${props => props.theme.brand.is9m() ? '1.8rem' : '2.2rem'};
+	background-color: ${props => props.theme.brand.is9m() ? 'transparent': 'rgba(247, 249, 249, 1)'};
+	color: ${props => props.theme.brand.is9m() && props.theme.palette.secondary.main};
+`;
+```
+#### Good:
+```
+const ExampleComponent = styled.div`
+    // Common properties (for all brands) is outside the condition allways
+    font-family: ${props => props.theme.fontBold};
+    ${props => props.theme.brand.is9m() ? `
+        font-size: 1.8rem;
+        background-color: transparent;
+        color: {props.theme.palette.secondary.main};
+    ` : `
+        font-size: 2.2rem;
+        background-color: rgba(247, 249, 249, 1);
+    `}
+`;
+```
 &nbsp;
 &nbsp;
 &nbsp;
