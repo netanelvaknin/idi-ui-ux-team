@@ -141,11 +141,11 @@ const ExampleComponent = styled.div`
 const ExampleComponent = styled.div`
     // Common properties (for all brands) is outside the condition allways
     font-family: ${props => props.theme.fontBold};
-    ${props => props.theme.brand.is9m() ? `
+    ${props => props.theme.brand.is9m() ? ` // 9m block
         font-size: 1.8rem;
         background-color: transparent;
         color: {props.theme.palette.secondary.main};
-    ` : `
+    ` : ` // other brands block
         font-size: 2.2rem;
         background-color: rgba(247, 249, 249, 1);
     `}
