@@ -130,8 +130,8 @@ Instead we can just declare one Ternary condition inside the component.
 #### Bad:
 ```
 const ExampleComponent = styled.div`
-    font-family: ${props => props.theme.fontBold};
-    font-size: ${props => props.theme.brand.is9m() ? '1.8rem' : '2.2rem'};
+	font-family: ${props => props.theme.fontBold};
+	font-size: ${props => props.theme.brand.is9m() ? '1.8rem' : '2.2rem'};
 	background-color: ${props => props.theme.brand.is9m() ? 'transparent': 'rgba(247, 249, 249, 1)'};
 	color: ${props => props.theme.brand.is9m() && props.theme.palette.secondary.main};
 `;
