@@ -156,6 +156,52 @@ const ExampleComponent = styled.div`
 &nbsp;
 &nbsp;
 &nbsp;
+
+### 2. Prefer creating new component instead selecting styles from "father" component
+Sometimes when we creating our markup and styling we can use two approaches:
+1. Create father component and select all nested tags for styling
+2. Create multiple nested components and style each one of them seperatly
+
+The better approach is to use the second approach for those reasons:
+1. During the project we ofter change the markup and when the markup change we can ensure that the
+   styling always going with us.
+2. When other programmers look at the markup tree they will see the components name and what they do instead of regular html tags.
+3. We can reuse the components that we created in other places.
+
+Anyway, Not in all cases we can use the second approach but we prefer to use it.
+
+#### Try to use as little as possible:
+```
+const ExampleComponent = styled.div`
+        width: 200px;
+ 	p {
+  	   display: inline;
+           [class*="text"] { 
+             color: blue;
+           }
+        }
+`;
+```
+#### Much better:
+```
+const ExampleComponent = styled.div`
+    width: 200px;
+`;
+
+const SomeParagraph = styled.p`
+     display: inline;
+`;
+
+const Text = styled.span`
+    color: blue;
+`;
+```
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
 ## React
 ### 1. Ordering props
 Props that start with the word "on" will allways be in the *END* of the interface / props destructuring order.
